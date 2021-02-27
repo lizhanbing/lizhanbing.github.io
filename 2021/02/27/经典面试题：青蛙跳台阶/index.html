@@ -20,7 +20,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>第三篇文章（测试） - Hexo</title>
+  <title>青蛙跳台阶 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -160,12 +160,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('https://rmt.dogedoge.com/fetch/fluid/storage/bg/vdysjx.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="第三篇文章（测试）">
+            <span class="h2" id="subtitle" title="青蛙跳台阶">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-02-27 17:02" pubdate>
-        2021年2月27日 下午
+      <time datetime="2021-02-27 20:10" pubdate>
+        2021年2月27日 晚上
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      273 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -227,15 +227,37 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">第三篇文章（测试）</h1>
+            <h1 style="display: none">青蛙跳台阶</h1>
             
             <div class="markdown-body">
-              
+              <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级台阶。求该青蛙跳上一个 n 级的台阶总共有多少种跳法。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>首先跳到 n 级台阶可以分解为两种情况：</p>
+<ol>
+<li>之前跳到 n-1 级台阶，然后再跳 1 级到达 n 级；</li>
+<li>之前跳到 n-2 级台阶，然后再跳 2 级到达 n 级；</li>
+</ol>
+<p>因此 n 级跳法数量，等于这两种情况之和。<br>即 <code>F(n) = F(n-1) + F(n-2)</code></p>
+<p>同理可继续推导：<br><code>F(n-1) = F(n-2) + F(n-3)</code><br><code>F(n-2) = F(n-3) + F(n-4)</code><br>…<br><code>F(2) = F(1) + F(0)</code><br><code>F(1) = 1</code><br><code>F(0) = 1</code></p>
+<p>可见这是斐波那契数列，数列中从第三个数开始，每个数都是前两个数之和。那么只需从 <code>F(0) + F(1) = F(2)</code> 开始计算，一直加到 <code>F(n)</code> 即可得出结果。</p>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><h3 id="Golang-版"><a href="#Golang-版" class="headerlink" title="Golang 版"></a>Golang 版</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">func <span class="hljs-keyword">JumpFloor(n </span>int) int &#123;<br>    a, <span class="hljs-keyword">b </span>:= <span class="hljs-number">1</span>, <span class="hljs-number">1</span><br>    for <span class="hljs-comment">; n &gt; 0; n-- &#123;  </span><br>        a, <span class="hljs-keyword">b </span>= <span class="hljs-keyword">b, </span>a + <span class="hljs-keyword">b</span><br><span class="hljs-keyword"> </span>   &#125;  <br>    return a<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="Python-版"><a href="#Python-版" class="headerlink" title="Python 版"></a>Python 版</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">def jump_floor(n):<br>    <span class="hljs-keyword">a</span>, b = <span class="hljs-number">1</span>, <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n):<br>        <span class="hljs-keyword">a</span>, b = b, <span class="hljs-keyword">a</span> + b<br>    <span class="hljs-literal">return</span> <span class="hljs-keyword">a</span><br></code></pre></td></tr></table></figure>
+
+
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Golang/">Golang</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                    
+                  </div>
                 
               </div>
               
@@ -254,8 +276,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/02/27/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">
-                        <span class="hidden-mobile">第二篇文章（测试）</span>
+                      <a href="/2021/02/27/%E6%8E%A2%E7%A9%B6-Go-%E8%AF%AD%E8%A8%80-defer-%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6/">
+                        <span class="hidden-mobile">探究 Go 语言 defer 语句的三种机制</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

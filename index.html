@@ -181,19 +181,32 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/02/27/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9A%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6/" target="_self">
+          <img src="https://static.zkqiang.cn/images/20200309004040.png-cover" srcset="/img/loading.gif" alt="青蛙跳台阶">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/27/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">第三篇文章（测试）</a>
+        <a href="/2021/02/27/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9A%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6/">青蛙跳台阶</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/27/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">
+        <a href="/2021/02/27/%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9A%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6/">
           
           
             
           
-          
+          题目一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级台阶。求该青蛙跳上一个 n 级的台阶总共有多少种跳法。
+思路首先跳到 n 级台阶可以分解为两种情况：
+
+之前跳到 n-1 级台阶，然后再跳 1 级到达 n 级；
+之前跳到 n-2 级台阶，然后再跳 2 级到达 n 级；
+
+因此 n 级跳法数量，等于这两种情况之和。即 F(n) = F(n-1) + F(n-2)
+同理可继续推导：F(n-1) 
         </a>
       </p>
 
@@ -201,12 +214,21 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-27 17:02" pubdate>
+            <time datetime="2021-02-27 20:10" pubdate>
               2021-02-27
             </time>
           </div>
         
         
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Golang/">Golang</a>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
         
       </div>
     </article>
@@ -215,53 +237,29 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/27/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">第二篇文章（测试）</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/27/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">
-          
-          
-            
-          
-          
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/02/27/%E6%8E%A2%E7%A9%B6-Go-%E8%AF%AD%E8%A8%80-defer-%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6/" target="_self">
+          <img src="https://static.zkqiang.cn/images/20200301135226.jpg-cover" srcset="/img/loading.gif" alt="探究 Go 语言 defer 语句的三种机制">
         </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-27 17:02" pubdate>
-              2021-02-27
-            </time>
-          </div>
-        
-        
-        
       </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/02/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">第一篇文章（测试）</a>
+        <a href="/2021/02/27/%E6%8E%A2%E7%A9%B6-Go-%E8%AF%AD%E8%A8%80-defer-%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6/">探究 Go 语言 defer 语句的三种机制</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/02/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89/">
+        <a href="/2021/02/27/%E6%8E%A2%E7%A9%B6-Go-%E8%AF%AD%E8%A8%80-defer-%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E6%9C%BA%E5%88%B6/">
           
           
             
           
-          
+          简介Go 的内建 map 是不支持并发写操作的，原因是 map 写操作不是并发安全的，当你尝试多个 Goroutine 操作同一个 map，会产生报错：fatal error: concurrent map writes。
+因此官方另外引入了 sync.Map 来满足并发编程中的应用。
+sync.Map 的实现原理可概括为：
+
+通过 read 和 dirty 两个字段将读写分离，读的数据存在只读字
         </a>
       </p>
 
@@ -269,42 +267,7 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-27 17:00" pubdate>
-              2021-02-27
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/27/hello-world/">Hello World</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/27/hello-world/">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-27 15:26" pubdate>
+            <time datetime="2021-02-27 20:10" pubdate>
               2021-02-27
             </time>
           </div>
